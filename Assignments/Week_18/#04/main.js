@@ -1,0 +1,21 @@
+let re = /https?:\/\/(?:[-\w]+\.)?([-\w]+)\.\w+(?:\.\w+)?\/?.*/i;
+// [https?] => matches http or https .
+// [:] => matches (:) .
+// [\/\/] => skipping for (/) .
+// (?:[-\w]+\.)?([-\w]+)
+// [(?] => matches zero or more from {(} .
+// [:] => matches (:) .
+// [-\w] => matches much of characters or digits .
+// [\.] => matches dot .
+// [(?:[-\w]+\.)] => matches zero or more from {(?:[-\w]+\.)} .
+// [([-\w]+)] => matches (-) and much of characters or digits .
+// [\.] => skipping for dot .
+// [-\w] => matches much of characters or digits .
+// [(?] => matches zero or more from {(} .
+// [:] => matches (:) .
+// [\.] => skipping for dot .
+// [-\w] => matches much of characters or digits .
+// [((?:\.\w+)?] => matches zero or more from {(?:\.\w+)} .
+// [\/] => skipping for (/) .
+// [\/?] => matches zero or more from {(} .
+// [.*] => matches zero or one from {.} .
