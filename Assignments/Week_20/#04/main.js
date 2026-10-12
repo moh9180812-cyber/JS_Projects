@@ -1,0 +1,6 @@
+let myDate1 = new Date("feb 1 2007")
+let myDate2 = new Date(2007, 1, 1, 0, 0, 0)
+let myDate3 = new Date(Date.parse("feb 1 2007"))
+console.log(myDate1)
+console.log(myDate2)
+console.log(myDate3)
